@@ -1,4 +1,4 @@
-let click = "O";
+let click = "X";
 let numbers = Array(9).fill(null);
 
 const sleep = (milliseconds) => {
@@ -11,6 +11,7 @@ for (let i = 0; i < 9; i++) {
     $(".winner").text("");
     if (numbers[i]) return;
     click = click == "O" ? "X" : "O";
+    $(".player").text(click == "O" ? "X" : "O");
     numbers[i] = click;
     console.log(numbers);
     $(tile).text(click);
